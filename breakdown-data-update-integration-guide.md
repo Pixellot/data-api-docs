@@ -81,7 +81,6 @@ When breakdown data is ready, your webhook will receive a POST request with this
 The notification includes these important HTTP headers:
 - `Content-Type`: `application/json`
 - `X-Pixellot-Signature`: HMAC SHA-1 signature for verification
-- `X-Request-ID`: Unique identifier for the notification request
 
 ### Verifying Notifications
 
@@ -182,13 +181,17 @@ Example data structure (simplified):
 | Missing notifications | • Webhook not accessible<br>• Subscription inactive | • Check webhook accessibility<br>• Verify subscription status |
 | Invalid signature | • Incorrect secret key<br>• Body transformation issues | • Verify secret key<br>• Use raw JSON body for signature calculation |
 | HTTP errors | • Server errors<br>• Timeout issues | • Check server logs<br>• Ensure quick response time |
-| File access issues | • Network connectivity<br>• Expired URL | • Verify network connectivity<br>• Remember URLs expire after 30 days |
+| File access issues | • Network connectivity<br>• Expired URL | • Verify network connectivity|
 
 ## Service Limits
 
 - Maximum of 2 subscriptions per message type per tenant
 - Webhook timeout: 10 seconds
-- Retry attempts: Up to 15 with exponential backoff
+- Retry attempts:
+    - After 1 second
+    - After 10 seconds
+    - After 60 seconds
+    - After 600 seconds
 
 
 ## Support Resources
