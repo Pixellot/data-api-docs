@@ -2,4 +2,4 @@
 
 ## Data Api
 
-* [BreakdownDataUpdates Integration Guide](breakdown-data-update-integration-guide.yaml.md)
+* [BreakdownData Updates Integration Guide](data-api/breakdown-data-update-integration-guide.yaml.md)
