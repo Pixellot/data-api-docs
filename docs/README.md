@@ -9,14 +9,13 @@ Our documentation is organized into several key sections:
 - **Getting Started**: Quick guides to help you begin using our API
 - **Guides**: Detailed documentation and tutorials for specific features
 - **API Reference**: Complete technical documentation of our endpoints and data models
-- **Examples**: Code samples and use cases in various programming languages
 - **Troubleshooting**: Solutions to common issues and frequently asked questions
 
 ## Quick Links
 
 - [Quick Start Guide](getting-started/quickstart.md)
-- [API Endpoints](guides/data-api/endpoints.md)
-- [Authentication](getting-started/authentication.md)
+- [Basic Concepts](getting-started/basic-concepts.md)
+- [Integration Guides](data-api/integration-guides/breakdown-data-update-integration-guide.md)
 - [Game Breakdown Schemas](api-reference/json-schemas/README.md)
   - [Basketball Game Breakdown](api-reference/json-schemas/basketball-game-breakdown.md)
   - [Football Game Breakdown](api-reference/json-schemas/football-game-breakdown.md)
