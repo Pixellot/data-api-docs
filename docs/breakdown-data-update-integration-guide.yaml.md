@@ -1,8 +1,8 @@
-# BreakdownDataUpdates Integration Guide
+# BreakdownData Updates Integration Guide
 
 ## Introduction
 
-Welcome to the Pixellot BreakdownDataUpdates Integration Guide. This document will help you set up and manage your subscription to receive real-time game breakdown data directly to your systems. Our service enables you to automatically receive game statistics and analytics as soon as they become available, allowing for timely integration into your platforms.
+Welcome to the Pixellot BreakdownData Updates Integration Guide. This document will help you set up and manage your subscription to receive real-time game breakdown data directly to your systems. Our service enables you to automatically receive game statistics and analytics as soon as they become available, allowing for timely integration into your platforms.
 
 ## Key Benefits
 
