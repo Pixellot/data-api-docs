@@ -7,6 +7,7 @@
 
 ## Guides
 * [Integration Guides](data-api/integration-guides/README.md)
+    * [GameBreakDown Integration Guide](data-api/integration-guides/breakdown-data-update-integration-guide.md)
 
 ## API Reference
 

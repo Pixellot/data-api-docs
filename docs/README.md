@@ -15,7 +15,7 @@ Our documentation is organized into several key sections:
 
 - [Quick Start Guide](getting-started/quickstart.md)
 - [Basic Concepts](getting-started/basic-concepts.md)
-- [Integration Guides](data-api/integration-guides/breakdown-data-update-integration-guide.md)
+- [Integration Guides](data-api/integration-guides/README.md)
 - [Game Breakdown Schemas](api-reference/json-schemas/README.md)
   - [Basketball Game Breakdown](api-reference/json-schemas/basketball-game-breakdown.md)
   - [Football Game Breakdown](api-reference/json-schemas/football-game-breakdown.md)
