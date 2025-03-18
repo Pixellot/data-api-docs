@@ -6,7 +6,7 @@
 * [Basic Concepts](getting-started/basic-concepts.md)
 
 ## Guides
-* [Integration Guides](data-api/integration-guides/breakdown-data-update-integration-guide.md)
+* [Integration Guides](data-api/integration-guides/README.md)
 
 ## API Reference
 
