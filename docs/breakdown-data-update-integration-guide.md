@@ -151,8 +151,6 @@ Example data structure (simplified):
 
 ### 1. Design for Redundancy
 
-- Implement idempotent processing using eventId as a unique key
-- Store processed notification IDs to prevent duplicate processing
 - Handle occasional duplicate notifications gracefully
 
 ### 2. Optimize Response Time
@@ -200,7 +198,7 @@ If you encounter any issues with your integration:
 
 1. Check your subscription status through the API
 2. Review your webhook server logs
-3. Contact Pixellot Support at support@pixellot.com with:
+3. Contact Pixellot Support at api-support@pixellot.com with:
    - Your subscription ID
    - Event ID (if applicable)
    - Timestamp of the issue
