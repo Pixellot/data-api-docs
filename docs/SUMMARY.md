@@ -2,20 +2,13 @@
 
 * [Introduction](README.md)
 
-## Getting Started
-* [Basic Concepts](getting-started/basic-concepts.md)
+## Vidswap
 
-## Guides
-* [Integration Guides](data-api/integration-guides/README.md)
-    * [GameBreakDown Integration Guide](data-api/integration-guides/breakdown-data-update-integration-guide.md)
 
+## DataApi
+  * [GameBreakDown Integration Guide](data-api/breakdown-data-update-integration-guide.md)
+  * [American Football Game Breakdown Schema](data-api/american-football-game-breakdown-schema.md) 
+  * [Basketball Game Breakdown Schema](data-api/basketball-game-breakdown-schema.md)
 ## API Reference
 
-* [JSON Schemas](api-reference/json-schemas/README.md)
-  * [Basketball Game Breakdown](api-reference/json-schemas/basketball-game-breakdown.md)
-  * [American Football Game Breakdown](api-reference/json-schemas/football-game-breakdown.md)
 
-## Troubleshooting
-
-* [Common Issues](troubleshooting/common-issues.md)
-* [FAQ](troubleshooting/faq.md)
