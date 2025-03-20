@@ -2,7 +2,7 @@
 
 ## Data Model Diagram
 
-![Entity Relationship Diagram](../images/EntityRelationModel.svg)
+![Entity Relationship Diagram](../images/entity-relations.png)
 
 *The diagram above illustrates the relationships between entities in our data model.*
 
