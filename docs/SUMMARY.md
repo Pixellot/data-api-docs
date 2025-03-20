@@ -5,7 +5,7 @@
 ## Vidswap
 
 
-## DataApi
+## Data API
   * [GameBreakDown Integration Guide](data-api/breakdown-data-update-integration-guide.md)
   * [American Football Game Breakdown Schema](data-api/american-football-game-breakdown-schema.md) 
   * [Basketball Game Breakdown Schema](data-api/basketball-game-breakdown-schema.md)

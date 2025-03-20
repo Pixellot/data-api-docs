@@ -6,7 +6,7 @@
 
 ## Overview
 
-This README provides a comprehensive guide to the integration flow for external content in the PlayOn system. The integration process allows partners to seamlessly incorporate their game videos into our platform through a structured API workflow.
+This is a comprehensive guide to the integration flow for external content for PlayOn. The integration process allows partners to seamlessly incorporate their game videos into our platform through a structured API workflow.
 
 ## System Components
 
