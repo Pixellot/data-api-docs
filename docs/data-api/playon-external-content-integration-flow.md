@@ -51,23 +51,6 @@ The Partner creates an External VOD Event by:
 - PlayOn creates the game entry in its system
 - PlayOn associates the game with the relevant teams based on provided metadata
 
-## Implementation Notes
 
-**Note**: The diagram above illustrates the complete flow between all system components. For proper display of the diagram, ensure the image file (`integration_flow_diagram.png`) is placed in the same directory as this README file or update the path accordingly.
 
-- All requests must include proper authentication headers
-- The PlayOn game ID must be properly formatted in the event name
-- Video files should conform to the supported format specifications
-- Partners should handle all response codes appropriately, including error scenarios
 
-## Related Documentation
-
-For more detailed information about the Data API Integration Project, please refer to the following resources:
-- API Documentation
-- Schema Definitions
-- Change Management Process
-- Communication Protocols
-
-## Support
-
-For integration support, please contact your designated Pixellot point of contact or reach out to our technical support team.
