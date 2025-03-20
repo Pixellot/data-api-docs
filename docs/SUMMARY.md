@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 
 ## Vidswap
+  * [Entity Relation Model](vidswap/entity-relations-document.md)
 
 
 ## Data API
