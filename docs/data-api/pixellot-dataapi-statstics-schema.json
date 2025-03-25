@@ -51,51 +51,16 @@
                   }
                 }
               },
-              "columnOrder": {
-                "type": "array",
-                "description": "Instructions on how the metric columns should be ordered (horizontal ordering)",
-                "items": {
-                  "type": "string",
-                  "description": "Primarily metric IDs, but typed as string for future expansion"
-                },
-                "examples": [["123", "321"]]
-              },
-              "rowOrder": {
-                "type": "object",
-                "description": "Instructions on how the metric rows should be ordered initially (vertical ordering)",
-                "required": [
-                  "byMetricId",
-                  "orderType"
-                ],
-                "properties": {
-                  "byMetricId": {
-                    "type": "integer",
-                    "description": "The metric ID to order by",
-                    "examples": [123]
-                  },
-                  "orderType": {
-                    "type": "string",
-                    "description": "Order direction",
-                    "enum": ["asc", "desc"]
-                  }
-                }
-              },
               "results": {
                 "type": "object",
                 "description": "The part of the response that contains the actual results, along with data explaining the context by which they were calculated",
                 "additionalProperties": false,
                 "required": [
-                  "statsType",
                   "entityHierarchy",
                   "allStats",
                   "includes"
                 ],
                 "properties": {
-                  "statsType": {
-                    "type": "string",
-                    "description": "Are the stats of type `allEntities` or `leaders`?",
-                    "enum": ["allEntities", "leaders"]
-                  },
                   "entityHierarchy": {
                     "type": "array",
                     "description": "The hierarchy used to group stats (e.g., [season, league, team]). The last entity is either `team` or `athlete`",
@@ -136,63 +101,30 @@
                           }
                         },
                         "stats": {
-                          "oneOf": [
-                            {
+                          "type": "object",
+                          "description": "A map of { entityId -> { metricId -> value } }",
+                          "patternProperties": {
+                            "^[0-9a-fA-F]{24}$": {
                               "type": "object",
-                              "description": "If `statsType=allEntities`, this is a map of { entityId -> { metricId -> value } }",
-                              "patternProperties": {
-                                "^[0-9a-fA-F]{24}$": {
-                                  "type": "object",
-                                  "description": "The key is the ID of the entity (team or athlete). The value is a map of metricId -> numeric result",
-                                  "patternProperties": {
-                                    "^[0-9]+$": {
-                                      "type": "number",
-                                      "format": "float"
-                                    }
-                                  }
-                                }
-                              },
-                              "examples": [
-                                {
-                                  "65323327596a7048186d6677": {
-                                    "123": 35.0,
-                                    "321": 89.468
-                                  },
-                                  "653245762187cfcf82e258f1": {
-                                    "123": 17.0,
-                                    "321": 96.258
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "object",
-                              "description": "If `statsType=leaders`, this is a map of { metricId -> { entityId -> value } }",
+                              "description": "The key is the ID of the entity (team or athlete). The value is a map of metricId -> numeric result",
                               "patternProperties": {
                                 "^[0-9]+$": {
-                                  "type": "object",
-                                  "description": "The key is the ID of the metric for which we are calculating its leaders",
-                                  "patternProperties": {
-                                    "^[0-9a-fA-F]{24}$": {
-                                      "type": "number",
-                                      "format": "float",
-                                      "description": "The key is the entity ID. The value is the numeric result for that metric"
-                                    }
-                                  }
+                                  "type": "number",
+                                  "format": "float"
                                 }
+                              }
+                            }
+                          },
+                          "examples": [
+                            {
+                              "65323327596a7048186d6677": {
+                                "123": 35.0,
+                                "321": 89.468
                               },
-                              "examples": [
-                                {
-                                  "123": {
-                                    "65323327596a7048186d6677": 478.0,
-                                    "653245762187cfcf82e258f1": 398.55
-                                  },
-                                  "321": {
-                                    "65323327596a7048186d6677": 986.0,
-                                    "653245762187cfcf82e258f1": 875.55
-                                  }
-                                }
-                              ]
+                              "653245762187cfcf82e258f1": {
+                                "123": 17.0,
+                                "321": 96.258
+                              }
                             }
                           ]
                         }
@@ -282,12 +214,6 @@
               "metrics": {
                 "$ref": "#/properties/data/properties/matchTeamStats/properties/metrics"
               },
-              "columnOrder": {
-                "$ref": "#/properties/data/properties/matchTeamStats/properties/columnOrder"
-              },
-              "rowOrder": {
-                "$ref": "#/properties/data/properties/matchTeamStats/properties/rowOrder"
-              },
               "results": {
                 "$ref": "#/properties/data/properties/matchTeamStats/properties/results"
               }
@@ -361,19 +287,16 @@
                       "properties": {
                         "id": {
                           "type": "string",
-                          "pattern": "^[0-9a-fA-F]{24}$",
                           "description": "The object id of the tag event",
                           "examples": ["67bbc79e91a779e0122dcf65"]
                         },
                         "gameId": {
                           "type": "string",
-                          "pattern": "^[0-9a-fA-F]{24}$",
                           "description": "The object id of the game to which the event applies",
                           "examples": ["67bb4ef005aae699a0d9454e"]
                         },
                         "playclipId": {
                           "type": "string",
-                          "pattern": "^[0-9a-fA-F]{24}$",
                           "description": "The object id of the play clip",
                           "examples": ["67bbc5b399fd464a56c9a6e6"]
                         },
