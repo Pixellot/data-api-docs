@@ -21,8 +21,7 @@
             "description": "Stats for the teams that participated in the game",
             "required": [
               "metrics",
-              "results",
-              "columnOrder"
+              "results"
             ],
             "properties": {
               "metrics": {
@@ -207,8 +206,7 @@
             "description": "Stats for the athletes on the roster that participated in the game",
             "required": [
               "metrics",
-              "results",
-              "columnOrder"
+              "results"
             ],
             "properties": {
               "metrics": {
@@ -224,18 +222,11 @@
             "description": "Stats on the top players by different metrics",
             "required": [
               "metrics",
-              "results",
-              "columnOrder"
+              "results"
             ],
             "properties": {
               "metrics": {
                 "$ref": "#/properties/data/properties/matchTeamStats/properties/metrics"
-              },
-              "columnOrder": {
-                "$ref": "#/properties/data/properties/matchTeamStats/properties/columnOrder"
-              },
-              "rowOrder": {
-                "$ref": "#/properties/data/properties/matchTeamStats/properties/rowOrder"
               },
               "results": {
                 "$ref": "#/properties/data/properties/matchTeamStats/properties/results"
@@ -247,18 +238,11 @@
             "description": "Stats on the score of the game",
             "required": [
               "metrics",
-              "results",
-              "columnOrder"
+              "results"
             ],
             "properties": {
               "metrics": {
                 "$ref": "#/properties/data/properties/matchTeamStats/properties/metrics"
-              },
-              "columnOrder": {
-                "$ref": "#/properties/data/properties/matchTeamStats/properties/columnOrder"
-              },
-              "rowOrder": {
-                "$ref": "#/properties/data/properties/matchTeamStats/properties/rowOrder"
               },
               "results": {
                 "$ref": "#/properties/data/properties/matchTeamStats/properties/results"
