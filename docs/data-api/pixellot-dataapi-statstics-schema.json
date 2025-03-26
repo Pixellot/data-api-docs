@@ -9,12 +9,6 @@
     "properties": {
       "data": {
         "type": "object",
-        "required": [
-          "matchTeamStats",
-          "matchRosterStats",
-          "matchBoxScore",
-          "gameBreakdown"
-        ],
         "properties": {
           "matchTeamStats": {
             "type": "object",
