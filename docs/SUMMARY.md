@@ -9,6 +9,7 @@
 ## Data API
   * [GameBreakDown Integration Guide](data-api/breakdown-data-update-integration-guide.md)
   * [PlayOn External Content integration Flow](data-api/playon-external-content-integration-flow.md)
+  * [Logging Process Flow](data-api/logging-process-flow.md)
 
 
 
