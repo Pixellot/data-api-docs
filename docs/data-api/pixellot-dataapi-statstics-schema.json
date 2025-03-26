@@ -48,6 +48,11 @@
               "includes"
             ],
             "properties": {
+              "statsType": {
+                "type": "string",
+                "description": "Are the stats of type `allEntities` or `leaders`?",
+                "enum": [ "StatsForLeaders", "StatsForAllEntities"]
+              },
               "entityHierarchy": {
                 "type": "array",
                 "description": "The hierarchy used to group stats (e.g., [season, league, team]). The last entity is either `team` or `athlete`",
@@ -89,31 +94,52 @@
                     },
                     "stats": {
                       "type": "object",
-                      "description": "A map of { entityId -> { metricId -> value } }",
-                      "patternProperties": {
-                        "^[0-9a-fA-F]{24}$": {
-                          "type": "object",
-                          "description": "The key is the ID of the entity (team or athlete). The value is a map of metricId -> numeric result",
-                          "patternProperties": {
-                            "^[0-9]+$": {
-                              "type": "number",
-                              "format": "float"
+                      "description": "The stats data structure varies based on statsType",
+                      "if": {
+                        "properties": {
+                          "statsType": {
+                            "const": "StatsForAllEntities"
+                          }
+                        }
+                      },
+                      "then": {
+                        "patternProperties": {
+                          "^[0-9a-fA-F]{24}$": {
+                            "type": "object",
+                            "description": "The key is the ID of the entity (team or athlete). The value is a map of metricId -> numeric result",
+                            "patternProperties": {
+                              "^[0-9]+$": {
+                                "type": "number",
+                                "format": "float"
+                              }
                             }
                           }
                         }
                       },
-                      "examples": [
-                        {
-                          "65323327596a7048186d6677": {
-                            "123": 35.0,
-                            "321": 89.468
-                          },
-                          "653245762187cfcf82e258f1": {
-                            "123": 17.0,
-                            "321": 96.258
+                      "else": {
+                        "if": {
+                          "properties": {
+                            "statsType": {
+                              "const": "StatsForLeaders"
+                            }
+                          }
+                        },
+                        "then": {
+                          "patternProperties": {
+                            "^[0-9]+$": {
+                              "type": "object",
+                              "description": "The key is the ID of the metric for which we are calculating its leaders",
+                              "patternProperties": {
+                                "^[0-9a-fA-F]{24}$": {
+                                  "type": "number",
+                                  "format": "float",
+                                  "description": "The key is the entity ID. The value is the numeric result for that metric"
+                                }
+                              }
+                            }
                           }
                         }
-                      ]
+                      }
                     }
                   }
                 }
@@ -124,7 +150,7 @@
                 "patternProperties": {
                   "^[0-9a-fA-F]{24}$": {
                     "description": "The key is the ID of the entity (team or athlete); the value describes that entity",
-                    "oneOf": [
+                    "anyOf": [
                       {
                         "type": "object",
                         "properties": {
