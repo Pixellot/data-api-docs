@@ -4,6 +4,18 @@
     "description": "Complete schema for the Pixellot Data API response including team stats, roster stats, box score, and game breakdown",
     "type": "object",
     "properties": {
+      "schemaUrl": {
+        "type": "string",
+        "description": "URL reference to the current schema definition",
+        "format": "uri",
+        "examples": ["https://api.pixellot.com/schemas/stats/v1.0.0"]
+      },
+      "schemaVersion": {
+        "type": "string",
+        "description": "Version of the schema following semantic versioning (X.Y.Z)",
+        "pattern": "^\\d+\\.\\d+\\.\\d+$",
+        "examples": ["1.0.0"]
+      },     
       "matchTeamStats": {
         "type": "object",
         "description": "Stats for the teams that participated in the game",
@@ -280,7 +292,8 @@
                     "id", 
                     "gameId", 
                     "resource", 
-                    "attrs"
+                    "attrs",
+                    "angles"
                   ],
                   "properties": {
                     "id": {
@@ -485,6 +498,12 @@
               "type": "string",
               "description": "Name of the camera angle",
               "examples": ["HP", "P3", "B1", "HH", "CF", "hd"]
+            },
+            "recordedStreamUrl" : {
+              "type": "string",
+              "description": "URL to the recorded video stream",
+              "format": "uri",
+              "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]            
             }
           }
         }
@@ -496,6 +515,6 @@
         "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]
       }
     }
-  }
+}
 
 
