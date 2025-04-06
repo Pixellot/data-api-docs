@@ -1,3 +1,4 @@
+```json title=Pixellot Stats API Schema"
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Pixellot Stats API Schema",
@@ -516,5 +517,4 @@
       }
     }
 }
-
-
+```
