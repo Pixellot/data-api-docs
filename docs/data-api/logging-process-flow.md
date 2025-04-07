@@ -45,10 +45,6 @@ This document provides a technical overview of the sports event logging workflow
   - Break-down type requirements
   - Office capacity and workload distribution
 
-### Logger Assignment
-- When logger takes job, system generates Webhook notification
-- Event status is updated to "In Logging"
-
 ### Logging Process
 - Logger reviews video quality
 - If quality is insufficient or large portions are missing, job may be failed
@@ -59,7 +55,7 @@ This document provides a technical overview of the sports event logging workflow
 
 ### Job Completion
 - Logger marks job as complete
-- System sends Webhook notification with "Logged" status
+- System sends internal notification with "Logged" status
 
 ## Data Processing and Distribution
 ### Data Enrichment
@@ -80,7 +76,8 @@ This document provides a technical overview of the sports event logging workflow
 - System monitors for updates to:
   - Event tagged data
   - Lineup information
-  - Video sources
+  - Video sources ( Once a video reaches a logged/logging the video sources cannot be updated anymore. In the scenario that a video is marked as corrupt it will not 
+  go into the event queue and will still be elegabile for reupload)
 
 ### Update Processing
 - If changes detected after breakdown completion:
