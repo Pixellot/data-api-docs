@@ -2,12 +2,17 @@
 
 This document describes the attributes used in American football event tracking. Since American football is a play-based game, each tag event will have a single resource (essentially null), with the attributes providing all the details of each play.
 
+## Play Clipping
+
+Playclips are started after a huddle break and ended a few seconds after the play ends
+
 ## Basic Play Information
 
 | Attribute | Type | Description | Values |
 |-----------|------|-------------|--------|
 | Team Ball | teamNames | Indicates which team has possession | Home, Away |
 | Qtr | list | Current quarter of the game | 1, 2, 3, 4, OT |
+| ODK | list | Offense/Defense/Kick indicator | OD, K |
 | Dwn | list | Current down | 1, 2, 3, 4 |
 | Dist | number | Distance to go for first down | |
 | Yd Beg | number | Starting yard line | |
@@ -37,15 +42,6 @@ This document describes the attributes used in American football event tracking.
 | Play Direction | list | Direction of the play | Left, Center, Right |
 | Blitz | list | Defensive blitz indicator | Blitz |
 
-## Special Teams
-
-| Attribute | Type | Description | Values |
-|-----------|------|-------------|--------|
-| ODK | list | Offense/Defense/Kickoff indicator | OD, K |
-| K YD Beg | number | Kicker's starting yard line | |
-| KR YD Beg | number | Kick returner's starting yard line | |
-| KR YD End | number | Kick returner's ending yard line | |
-
 ## Player References
 
 Player reference attributes can contain either:
@@ -55,9 +51,9 @@ Player reference attributes can contain either:
 | Attribute | Type | Description | Values |
 |-----------|------|-------------|--------|
 | Passer | rosterAthletes | Quarterback on the play | Player ID or text string |
-| Ball Carrier | rosterAthletes | Player carrying the ball | Player ID or text string |
-| Defender | rosterAthletes | Primary defender | Player ID or text string |
-| Defender2 | rosterAthletes | Secondary defender | Player ID or text string |
+| Ball Carrier | rosterAthletes | Player Rushing or Receiving the ball | Player ID or text string |
+| Defender | rosterAthletes | Primary Tackler, Player Intercepting the ball | Player ID or text string |
+| Defender2 | rosterAthletes | Secondary Tackler | Player ID or text string |
 | Kicker | rosterAthletes | Kicker on the play | Player ID or text string |
 
 ## Additional Indicators
