@@ -11,6 +11,8 @@
   * [PlayOn External Content integration Flow](data-api/playon-external-content-integration-flow.md)
   * [Logging Process Flow](data-api/logging-process-flow.md)
   * [Schema](data-api/pixellot-dataapi-statstics-schema.md)
+  * [Glossaries](data-api/glossary/README.md)
+    * [American Football Glossary](data-api/glossary/american-football/american-football-glossary.md)
 
 
 
