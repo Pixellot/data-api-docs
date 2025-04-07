@@ -3,13 +3,14 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Pixellot Stats API Schema",
     "description": "Complete schema for the Pixellot Data API response including team stats, roster stats, box score, and game breakdown",
+    "version": "0.0.0",
     "type": "object",
     "properties": {
       "schemaUrl": {
         "type": "string",
         "description": "URL reference to the current schema definition",
         "format": "uri",
-        "examples": ["https://api.pixellot.com/schemas/stats/v1.0.0"]
+        "examples": ["https://api.pixellot.com/schemas/stats/v1.0.0/schema.json"]
       },
       "schemaVersion": {
         "type": "string",
