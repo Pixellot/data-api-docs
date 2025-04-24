@@ -168,6 +168,11 @@
                       {
                         "type": "object",
                         "properties": {
+                          "objectType": {
+                            "type": "string",
+                            "description": "Type of the object in includes (in this case team)",
+                            "const": "team"
+                          },
                           "teamName": {
                             "type": "string",
                             "description": "The name of the basketball team",
@@ -178,6 +183,11 @@
                       {
                         "type": "object",
                         "properties": {
+                          "objectType": {
+                            "type": "string",
+                            "description": "Type of the object in includes (in this case athlete)",
+                            "const": "athlete"
+                          },
                           "firstName": {
                             "oneOf": [
                               {
@@ -208,6 +218,18 @@
                                 "type": "string",
                                 "description": "Player middle name",
                                 "examples": ["Albert"]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "teamId": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "description": "Player team id",
+                                "examples": ["652d266bc4732ea5a44327f9"]
                               },
                               {
                                 "type": "null"
