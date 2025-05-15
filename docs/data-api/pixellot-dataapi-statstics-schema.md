@@ -531,12 +531,6 @@
             }
           }
         }
-      },
-      "recordedStreamUrl": {
-        "type": "string",
-        "description": "URL to the recorded video stream (only for Pixellot camera source)",
-        "format": "uri",
-        "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]
       }
     }
 }
