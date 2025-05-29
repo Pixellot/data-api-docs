@@ -1,46 +1,83 @@
 # Data API Schema Update Process - Partner Guide
 
 ## Overview
+This document outlines how Pixellot manages schema updates for the Data API. Our coordinated approach ensures all partners have adequate time to prepare while maintaining system stability.
 
-This document outlines how Pixellot manages schema updates for the Data API and what partners can expect during major version releases. Our coordinated approach ensures all partners have adequate time to prepare while maintaining system stability.
+
 
 ## Update Types and Notice Periods
 
 ### Schema Version Types
-- **Major Version (X.0.0)**: Contains breaking changes that may require code modifications
-- **Minor Version (0.Y.0)**: Adds new functionality without breaking existing integrations
-- **Patch Version (0.0.Z)**: Bug fixes and minor improvements
+A **Major Version (X.0.0)** indicates substantial changes to the API schema that typically require partners to update their integration code. These changes may include the removal of fields, new required fields, structural modifications, or changes to existing field formats.
+
+A **Minor Version (0.Y.0)** introduces new features or optional fields while maintaining backward compatibility. These updates enhance functionality without forcing partners to modify their existing integration code.
 
 ### Advance Notice
 - **Major Version**: 60-day advance notice
-- **Minor Version**: 30-day advance notice  
-- **Patch Version**: 14-day advance notice
-- **Critical Security/Bug Fixes**: 1 hour notice (emergency situations only)
+- **Minor Version**: 14-day advance notice  
+
+## Critical Bug Fixes
+In cases where we identify critical structural issues that could impact system stability or data integrity, we may need to implement fixes on an accelerated timeline. When such situations arise, we will immediately notify all partners and provide detailed information about the changes and their impact. This ensures we can maintain system reliability while keeping you informed of any necessary adjustments.
 
 ## Major Version Release Process
 
 ### Timeline Overview
 When we announce a major schema update, here's what you can expect:
 
-**Day 0**: Schema update announcement with draft schema available  
-**Day 15**: Partner consultation period begins  
+**Day 0**: Schema update announcement with draft schema, sample breakdown documents, and release document available. Request for comments email sent to partners  
+**Day 15**: Partner consultation period ends  
 **Day 45**: Integration testing should be completed  
-**Day 53**: Final readiness confirmation required  
-**Day 60**: New schema goes live
+**Day 53**: Final rollout email sent to customers  
+**Day 60**: New schema goes live at predefined time
 
 ### Key Milestones
 
-#### Day 45: Initial Readiness Check
-We'll reach out to confirm your integration testing progress and identify any support needs.
+#### Day 0: Initial Release
+- Draft schema available
+- Sample breakdown documents provided
+- Release document published
+- Request for comments email sent to partners
 
-#### Day 30: Testing Deadline
-All integration testing should be completed by this date. Sample data and documentation will be available to support your testing.
+#### Day 15: Consultation Period End
+- Partner feedback collection period concludes
+- Review of partner comments and concerns
 
-#### Day 14: Final Confirmation
-You'll need to confirm your readiness for the schema change. This is your last chance to raise any blocking issues.
+#### Day 45: Testing Completion
+- All integration testing should be completed
+- Sample data and documentation available for testing
 
-#### Day 7: Go/No-Go Decision
-Final decision point. If critical issues are identified, the release may be postponed.
+#### Day 53: Final Rollout
+- Final rollout email sent to customers
+- Last chance to raise any blocking issues
+
+#### Day 60: Go-Live
+- New schema becomes active at predefined time
+- System switches to new schema version
+
+## Minor Version Release Process
+
+### Timeline Overview
+For minor schema updates, we follow a streamlined process:
+
+**Day 0**: Schema update announcement with:
+- Draft schema
+- Sample data
+- Release document
+- Notification email to partners
+
+**Day 14**: New schema goes live at predefined time
+
+### Key Milestones
+
+#### Day 0: Initial Release
+- Draft schema available
+- Sample data provided
+- Release document published
+- Notification email sent to partners
+
+#### Day 14: Go-Live
+- New schema becomes active at predefined time
+- System switches to new schema version
 
 ## What We Provide
 
@@ -68,22 +105,7 @@ Before confirming readiness, please ensure you have:
 
 ### Communication Requirements
 - **Report integration issues immediately** during the testing period
-- **Confirm final readiness** by Day 53
 
-## Schema Change Types
-
-### Breaking Changes
-Changes that require code modifications on your end:
-- **Removed Fields**: Fields that no longer exist in the payload
-- **Modified Field Formats**: Changes to data types, formats, or structure
-- **New Required Fields**: Fields that must be handled by your integration
-- **Structural Changes**: Changes to the overall payload organization
-
-### Non-Breaking Changes
-Changes that shouldn't affect existing integrations:
-- **New Optional Fields**: Additional data you can choose to use
-- **Enhanced Documentation**: Clarifications and additional examples
-- **Performance Improvements**: Backend optimizations
 
 ## Emergency Procedures
 
@@ -94,11 +116,6 @@ In rare cases where critical issues are discovered post-release:
 3. A root cause analysis will be conducted
 4. A revised timeline for re-release will be provided
 
-### Urgent Support
-For critical issues during the transition period:
-- **Immediate Response Channel**: [Contact details to be provided]
-- **Escalation Process**: Direct access to senior technical team
-- **Status Updates**: Regular communication until resolution
 
 ## Best Practices for Partners
 
@@ -121,7 +138,7 @@ For critical issues during the transition period:
 ## Frequently Asked Questions
 
 ### Q: What happens if we're not ready by the deadline?
-If a critical partner cannot meet the deadline, we may postpone the release. However, this affects all partners, so early communication about potential delays is essential.
+If a partner cannot meet the deadline, we may postpone the release. However, this affects all partners, so early communication about potential delays is essential.
 
 ### Q: Can we test against the new schema before the release?
 Yes, draft schemas are available immediately upon announcement, and we provide sample data for testing.
@@ -133,14 +150,34 @@ Please report issues immediately. We'll work with you to resolve them, and if ne
 No, schema updates are part of your existing Data API subscription. However, you may incur internal development costs for integration updates.
 
 ### Q: How often do major schema updates occur?
-We aim to minimize breaking changes and typically release major versions no more than twice per year, with advance planning shared during our regular partner communications.
+We aim to minimize breaking changes and release major versions only when necessary. Advance planning and timing of major updates will be shared during our regular partner communications.
 
-## Support Contacts
+---
 
-- **Technical Questions**: [Technical support channel]
-- **Schema Issues**: GitHub Issues in our public data-api repository
-- **Account Management**: [Account manager contact]
-- **Urgent Escalation**: [Emergency contact information]
+## Minor Version Release Process
+
+### Timeline Overview
+For minor schema updates, we follow a streamlined process:
+
+**Day 0**: Schema update announcement with:
+- Draft schema
+- Sample data
+- Release document
+- Notification email to partners
+
+**Day 14**: New schema goes live at predefined time
+
+### Key Milestones
+
+#### Day 0: Initial Release
+- Draft schema available
+- Sample data provided
+- Release document published
+- Notification email sent to partners
+
+#### Day 14: Go-Live
+- New schema becomes active at predefined time
+- System switches to new schema version
 
 ---
 
