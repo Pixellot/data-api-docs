@@ -514,10 +514,6 @@
         "items": {
           "type": "object",
           "properties": {
-            "id": {
-              "type": "number",
-              "description": "Unique identifier for the angle"
-            },
             "name": {
               "type": "string",
               "description": "Name of the camera angle",
