@@ -8,6 +8,10 @@
 
 This is a comprehensive guide to the integration flow for external content for PlayOn. The integration process allows partners to seamlessly incorporate their game videos into our platform through a structured API workflow.
 
+## Prerequisites
+
+Before beginning the integration process, partners must have an external venue set up in our system. If you don't have an external venue configured, please contact our support team to request venue creation. You will need the external venue ID for the integration flow.
+
 ## System Components
 
 The integration involves five key components:
@@ -61,7 +65,6 @@ Content-Type: application/json
 **Important Fields:**
 - `start$date` and `end$date`: Must be in the past and in ISO 8601 format (UTC)
 - `status`: Must be "archived"
-- `type`: Must be "externalContent"
 - `streamType`: Must be "vod"
 
 ### 3. Event Confirmation
@@ -88,7 +91,6 @@ Content-Type: application/json
   "hd": {
     "vod": {
       "hls": {
-        "durationSec": 3600,
         "videoFileUrl": "https://your-cloud-storage.com/path/to/video.mp4"
       }
     }
@@ -97,8 +99,7 @@ Content-Type: application/json
 ```
 
 **Important Fields:**
-- `durationSec`: Duration of the video in seconds
-- `videoFileUrl`: Direct URL to your MP4 file
+- `videoFileUrl`: Direct URL to your MP4 or m3u8 file
 
 ### 5. Video Processing
 - PAPI internally processes the uploaded video recording
@@ -112,6 +113,20 @@ Content-Type: application/json
 - Edge retrieves game information by sending a GET request to PlayOn via `/gameId`
 - PlayOn creates the game entry in its system
 - PlayOn associates the game with the relevant teams based on provided metadata
+
+## Key Notes
+
+### Authentication
+Ensure your API token is valid and has the necessary permissions.
+
+### URLs and Permissions
+All URLs provided in the payloads must be publicly accessible or have appropriate permissions for our system to access them.
+
+### Processing and Availability
+After completing these steps, our system will process the events and videos, notify subscribers, and make the content available for viewing.
+
+### Support
+For any issues or further assistance, please contact our support team.
 
 
 
