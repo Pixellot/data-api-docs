@@ -4,7 +4,6 @@ This section contains sport-specific glossaries that define and explain key term
 
 ## Available Glossaries
 
-- [Basketball Glossary](./basketball/basketball.md)
 - [American Football Glossary](./american-football/american-football.md)
 - [Field Hockey Glossary](./field-hockey/field-hockey.md)
 - [Soccer Glossary](./soccer/soccer.md)
