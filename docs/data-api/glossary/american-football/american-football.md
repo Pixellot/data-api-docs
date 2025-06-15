@@ -26,10 +26,12 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 ### Value Descriptions:
 
 **Team Ball Values:**
+
 - Home: The home team has possession of the ball
 - Away: The away team has possession of the ball
 
 **Qtr Values:**
+
 - 1: First quarter of the game
 - 2: Second quarter of the game
 - 3: Third quarter of the game
@@ -37,16 +39,19 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 - OT: Overtime period
 
 **ODK Values:**
+
 - OD: Offense/Defense situation (standard play)
 - K: Kicking situation (special teams play)
 
 **Dwn Values:**
+
 - 1: First down
 - 2: Second down
 - 3: Third down
 - 4: Fourth down
 
 **Play Type Values:**
+
 - Pass: A standard forward pass attempt beyond the line of scrimmage
 - Run: A rushing play where the ball carrier advances by running
 - Screen: A short pass to a receiver positioned behind blockers
@@ -58,6 +63,7 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 - No Play: A play that was nullified, usually due to a penalty
 
 **Result Values:**
+
 - Complete: A pass that was successfully caught by the intended receiver
 - Incomplete: A pass that was not caught by the intended receiver
 - Fumble (kept): The ball was dropped but recovered by the fumbling team
@@ -70,6 +76,7 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 - Return: The ball was returned after a kick or turnover
 
 **TD Value:**
+
 - TD: Indicates that the play resulted in a touchdown (6 points)
 
 ## Field Position
@@ -84,24 +91,28 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 ### Value Descriptions:
 
 **Field Values:**
+
 - 0 to 20: The area from the offense's goal line to their 20-yard line
 - 21 to 50: The area from the offense's 21-yard line to midfield
 - -49 to -21: The area from midfield to the opponent's 21-yard line
 - -20 to 0: The area from the opponent's 20-yard line to their goal line (red zone)
 
 **Dist Zone Values:**
+
 - Short (1-3): First down requires 1 to 3 yards
 - Medium (4-6): First down requires 4 to 6 yards
 - Long (7-10): First down requires 7 to 10 yards
 - X Long (11+): First down requires 11 or more yards
 
 **Gain Zone Values:**
+
 - Short (1-3): Play resulted in a gain of 1 to 3 yards
 - Medium (4-6): Play resulted in a gain of 4 to 6 yards
 - Long (7-10): Play resulted in a gain of 7 to 10 yards
 - X Long (11+): Play resulted in a gain of 11 or more yards
 
 **Hash Values:**
+
 - L: Ball is positioned at the left hash mark
 - M: Ball is positioned in the middle of the field
 - R: Ball is positioned at the right hash mark
@@ -119,6 +130,7 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 ### Value Descriptions:
 
 **Form Values:**
+
 - 1x1: One receiver on each side of the formation
 - 2x1: Two receivers on one side, one on the other
 - 3x1: Three receivers on one side, one on the other
@@ -132,6 +144,7 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 - 0x0: No wide receivers (heavy formation)
 
 **Pers Values:**
+
 - 10: Formation with 1 running back, 0 tight ends, 4 wide receivers
 - 11: Formation with 1 running back, 1 tight end, 3 wide receivers
 - 12: Formation with 1 running back, 2 tight ends, 2 wide receivers
@@ -145,21 +158,25 @@ Playclips are started after a huddle break and ended a few seconds after the pla
 - 32: Formation with 3 running backs, 2 tight ends, 0 wide receivers
 
 **QB Position Values:**
+
 - Gun: Quarterback lined up several yards behind the center (shotgun formation)
 - Under Center: Quarterback positioned directly behind center to take the snap by hand
 - Pistol: Quarterback positioned between shotgun and under center depths
 
 **Play Direction Values:**
+
 - Left: Play designed to attack the left side of the field
 - Center: Play designed to attack the middle of the field
 - Right: Play designed to attack the right side of the field
 
 **Blitz Value:**
+
 - Blitz: Defense sends extra pass rushers beyond the standard front
 
 ## Player References
 
 Player reference attributes can contain either:
+
 - A player ID (numeric) when referencing a canonical player in the system
 - A text string when referencing a non-canonical player (e.g., "John Doe" or "Unknown Player")
 
@@ -174,22 +191,27 @@ Player reference attributes can contain either:
 ### Value Descriptions:
 
 **Passer Values:**
+
 - Player ID: Unique numeric identifier for a canonical player in the system
 - Text string: Name or description ("John Doe" or "Unknown Player") for non-canonical players
 
 **Ball Carrier Values:**
+
 - Player ID: Unique numeric identifier for a canonical player in the system
 - Text string: Name or description for non-canonical players who carried the ball
 
 **Defender Values:**
+
 - Player ID: Unique numeric identifier for a canonical defensive player
 - Text string: Name or description for non-canonical defensive players
 
 **Defender2 Values:**
+
 - Player ID: Unique numeric identifier for a canonical defensive player making an assist
 - Text string: Name or description for non-canonical defensive players assisting on a tackle
 
 **Kicker Values:**
+
 - Player ID: Unique numeric identifier for a canonical kicking specialist
 - Text string: Name or description for non-canonical kicking players
 
@@ -199,17 +221,20 @@ Player reference attributes can contain either:
 |-----------|------|-------------|--------|
 | Pen | list | Penalty indicator | Penalty |
 | Review | list | Play under review indicator | Yes |
-| Highlight | list | Play highlight quality | Okay, Good, Great | 
+| Highlight | list | Play highlight quality | Okay, Good, Great |
 
 ### Value Descriptions:
 
 **Pen Value:**
+
 - Penalty: Indicates a foul occurred during the play
 
 **Review Value:**
+
 - Yes: Indicates the play is being reviewed by officials using video replay
 
 **Highlight Values:**
+
 - Okay: A basic play that may be included in extended highlight packages
 - Good: A notable play worth including in standard highlight reels
 - Great: An exceptional play that should be featured prominently in highlight packages
