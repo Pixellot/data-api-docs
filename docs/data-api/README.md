@@ -11,6 +11,6 @@
 - [Schema](pixellot-dataapi-statstics-schema.md)
 
 ### Glossaries
-- [Sport-Specific Glossaries](glossary/glossaries.md) - Complete collection of sport-specific terminology and definitions
+- [Sport-Specific Glossaries](./glossary/glossaries.md) - Complete collection of sport-specific terminology and definitions
 
 
