@@ -43,7 +43,6 @@ When we announce a major schema update, here's what you can expect:
 
 #### Day 15: Testing Completion
 - All integration testing should be completed
-- Sample data and documentation available for testing
 
 #### Day 25: Final Rollout
 - Final rollout email sent to customers
