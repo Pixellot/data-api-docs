@@ -86,7 +86,6 @@ For each major release, you'll receive:
 ### Schema Documentation
 All schema versions and related materials are available in our public GitHub repository:
 - Current and historical schema versions
-- Sample payloads for testing
 - Migration guides and documentation
 
 ## Your Responsibilities
@@ -136,7 +135,7 @@ In rare cases where critical issues are discovered post-release:
 If a partner cannot meet the deadline, we may postpone the release. However, this affects all partners, so early communication about potential delays is essential.
 
 ### Q: Can we test against the new schema before the release?
-Yes, draft schemas are available immediately upon announcement, and we provide sample data for testing.
+Yes, draft schemas are available immediately upon announcement.
 
 ### Q: What if we discover issues during testing?
 Please report issues immediately. We'll work with you to resolve them, and if necessary, adjust the schema or timeline.
