@@ -13,7 +13,7 @@ A **Major Version (X.0.0)** indicates substantial changes to the API schema that
 A **Minor Version (0.Y.0)** introduces new features or optional fields while maintaining backward compatibility. These updates enhance functionality without forcing partners to modify their existing integration code.
 
 ### Advance Notice
-- **Major Version**: 60-day advance notice
+- **Major Version**: 30-day advance notice
 - **Minor Version**: 14-day advance notice  
 
 ## Critical Bug Fixes
@@ -24,33 +24,32 @@ In cases where we identify critical structural issues that could impact system s
 ### Timeline Overview
 When we announce a major schema update, here's what you can expect:
 
-**Day 0**: Schema update announcement with draft schema, sample breakdown documents, and release document available. Request for comments email sent to partners  
-**Day 15**: Partner consultation period ends  
-**Day 45**: Integration testing should be completed  
-**Day 53**: Final rollout email sent to customers  
-**Day 60**: New schema goes live at predefined time
+**Day 0**: Schema update announcement with draft schema, and release document available. Request for comments email sent to partners  
+**Day 7**: Partner consultation period ends  
+**Day 15**: Integration testing should be completed  
+**Day 25**: Final rollout email sent to customers  
+**Day 30**: New schema goes live at predefined time
 
 ### Key Milestones
 
 #### Day 0: Initial Release
 - Draft schema available
-- Sample breakdown documents provided
 - Release document published
 - Request for comments email sent to partners
 
-#### Day 15: Consultation Period End
+#### Day 7: Consultation Period End
 - Partner feedback collection period concludes
 - Review of partner comments and concerns
 
-#### Day 45: Testing Completion
+#### Day 15: Testing Completion
 - All integration testing should be completed
 - Sample data and documentation available for testing
 
-#### Day 53: Final Rollout
+#### Day 25: Final Rollout
 - Final rollout email sent to customers
 - Last chance to raise any blocking issues
 
-#### Day 60: Go-Live
+#### Day 30: Go-Live
 - New schema becomes active at predefined time
 - System switches to new schema version
 
@@ -61,7 +60,6 @@ For minor schema updates, we follow a streamlined process:
 
 **Day 0**: Schema update announcement with:
 - Draft schema
-- Sample data
 - Release document
 - Notification email to partners
 
@@ -84,7 +82,6 @@ For minor schema updates, we follow a streamlined process:
 ### Documentation Package
 For each major release, you'll receive:
 - **Schema Update Document**: Complete overview of changes and impact assessment
-- **Sample Data**: Representative payloads using the new schema format
 - **Technical Details**: Schema file locations and reference materials
 
 ### Schema Documentation
@@ -98,7 +95,6 @@ All schema versions and related materials are available in our public GitHub rep
 ### Testing Requirements
 Before confirming readiness, please ensure you have:
 - [ ] Updated your integration code to handle the new schema structure
-- [ ] Tested with all provided sample payloads
 - [ ] Verified backward compatibility handling where applicable
 - [ ] Conducted performance testing with larger payloads
 - [ ] Updated any dependent systems or processes
@@ -121,7 +117,7 @@ In rare cases where critical issues are discovered post-release:
 
 ### Preparation
 - **Start Early**: Begin integration work as soon as the draft schema is available
-- **Test Thoroughly**: Use all provided sample data and create additional test scenarios
+- **Test Thoroughly**: Create test scenarios and test thoroughly
 - **Plan for Rollback**: Ensure you can quickly revert changes if needed
 - **Document Changes**: Keep track of modifications made to your systems
 
