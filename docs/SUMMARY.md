@@ -12,6 +12,10 @@
   * [Logging Process Flow](data-api/logging-process-flow.md)
   * [Schema](data-api/pixellot-dataapi-statstics-schema.md)
   * [Glossaries](data-api/glossary/glossaries.md)
+    * [American Football](data-api/glossary/american-football/american-football.md)
+    * [Field Hockey](data-api/glossary/field-hockey/field-hockey.md)
+    * [Soccer](data-api/glossary/soccer/soccer.md)
+    * [Volleyball](data-api/glossary/volleyball/volleyball.md)
 
 
 
