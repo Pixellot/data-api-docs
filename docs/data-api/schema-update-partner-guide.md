@@ -69,7 +69,6 @@ For minor schema updates, we follow a streamlined process:
 
 #### Day 0: Initial Release
 - Draft schema available
-- Sample data provided
 - Release document published
 - Notification email sent to partners
 
@@ -157,7 +156,6 @@ For minor schema updates, we follow a streamlined process:
 
 **Day 0**: Schema update announcement with:
 - Draft schema
-- Sample data
 - Release document
 - Notification email to partners
 
@@ -167,7 +165,6 @@ For minor schema updates, we follow a streamlined process:
 
 #### Day 0: Initial Release
 - Draft schema available
-- Sample data provided
 - Release document published
 - Notification email sent to partners
 
