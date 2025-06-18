@@ -6,6 +6,17 @@
 
 This glossary documents all possible tagEvents resources and their attributes specific to Soccer (Football) tagging. It serves as a comprehensive reference for developers working with our Soccer tagging API, which uses a flow-based structure to track continuous game actions, transitions, and player movements throughout the match.
 
+### Tagging Methodology
+
+Our soccer tagging system uses two main types of tag creation:
+
+- **Running Tags**: Continuous tags that are turned on and off based on specific game conditions
+- **Instant Tags**: Point-in-time tags that capture specific events with predefined durations
+
+Each tag has specific lead times and durations:
+- **Lead Time**: The amount of time BEFORE the logger's click that the tag event starts.
+- **Duration**: How long the tag remains active (for instant tags) or whether it's continuous (for running tags).
+
 ### Table of Contents
 
 - [Attack 3rd](#attack-3rd)
@@ -29,6 +40,9 @@ Description of the Attack 3rd resource in the context of Soccer. This resource t
 |----------------|------|----------------|-------------|
 | Team | teamNames | | The team entering their attacking third |
 
+**Tag Creation**: Running  
+**Lead Time**: 1 second  
+**Duration**: 0 seconds (continuous until ball leaves zone)  
 **Timings**: Turn on when ball enters the zone of last 25-30m, it doesn't matter which team has the ball in that area, we turn off this tag when ball leaves that zone
 
 ## Cross
@@ -41,6 +55,9 @@ Description of the Cross resource in the context of Soccer. This resource captur
 | Athlete | rosterAthletes | | The player delivering the cross |
 | Cross_Successful | enum | "Successful" | Whether the cross reached its intended target |
 
+**Tag Creation**: Instant  
+**Lead Time**: 2 seconds  
+**Duration**: 7 seconds  
 **Timings**: 1-2s before player takes a cross
 
 ## Duel
@@ -52,6 +69,9 @@ Description of the Duel resource in the context of Soccer. This resource tracks 
 | Won_By | teamNames | | The team that won the duel |
 | Duel_Type | enum | "Ground", "Physical", "Looseball", "Aerial" | The type of duel contest |
 
+**Tag Creation**: Instant  
+**Lead Time**: 2 seconds  
+**Duration**: 5 seconds  
 **Timings**: Turn on 1-2s before aerial duel occur on the field
 
 **Attribute Value Descriptions:**
@@ -70,6 +90,9 @@ Description of the Foul - legacy resource in the context of Soccer. This legacy 
 | Card | enum | "", "yellow", "red" | Card issued for the foul |
 | Advantage | enum | "", "advantage" | Whether advantage was played |
 
+**Tag Creation**: Instant  
+**Lead Time**: 3 seconds  
+**Duration**: 1 second  
 **Timings**: Turn on 2-3s before player commit a foul, also 2-3s if referee decide to give advantage to that foul
 
 **Attribute Value Descriptions:**
@@ -86,6 +109,9 @@ Description of the Offside resource in the context of Soccer. This resource trac
 |----------------|------|----------------|-------------|
 | Team | teamNames | | The team committing the offside offense |
 
+**Tag Creation**: Instant  
+**Lead Time**: 0 seconds  
+**Duration**: 4 seconds  
 **Timings**: Turn on 2-3s before referee calls offside
 
 ## Pass
@@ -101,6 +127,9 @@ Description of the Pass resource in the context of Soccer. This resource capture
 | Direction | enum | "back", "forward", "sideway" | The directional nature of the pass |
 | Length | enum | "short", "medium", "long" | The distance of the pass |
 
+**Tag Creation**: Instant  
+**Lead Time**: 2 seconds  
+**Duration**: 5 seconds  
 **Timings**: Turn on 1-2s before player makes a pass
 
 **Attribute Value Descriptions:**
@@ -127,6 +156,9 @@ Description of the Period resource in the context of Soccer. This resource track
 |----------------|------|----------------|-------------|
 | Period | enum | "1", "2", "OT" | Current period of play |
 
+**Tag Creation**: Running  
+**Lead Time**: 0 seconds  
+**Duration**: 0 seconds (continuous throughout period)  
 **Timings**: Turn on 5s before start of the halftime and turn off 5s after end of halftime
 
 **Attribute Value Descriptions:**
@@ -145,6 +177,9 @@ Description of the Possession resource in the context of Soccer. This resource t
 | Team | teamNames | | The team in possession of the ball |
 | Strings | enum | "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+" | Number of consecutive passes in possession |
 
+**Tag Creation**: Running  
+**Lead Time**: 0 seconds  
+**Duration**: 0 seconds (continuous until possession changes)  
 **Timings**: Turn on when one team have full control on the ball, and turn off when other team get steal, they make turnover, team scored a goal, there is a injury that need medical treatment or end of halftime or OT
 
 **Attribute Value Descriptions:**
@@ -163,6 +198,9 @@ Description of the Set Piece resource in the context of Soccer. This resource tr
 | athlete | rosterAthletes | | The player taking the set piece |
 | Team | teamNames | | The team awarded the set piece |
 
+**Tag Creation**: Instant  
+**Lead Time**: 2 seconds  
+**Duration**: 4 seconds  
 **Timings**: Turn on 2-3s before player takes some of the set piece-s
 
 **Attribute Value Descriptions:**
@@ -191,6 +229,9 @@ Description of the Shot resource in the context of Soccer. This resource capture
 | Own_Goal | enum | "", "yes" | Whether the shot resulted in an own goal |
 | Block_Athlete | rosterAthletes | | The player who blocked the shot |
 
+**Tag Creation**: Instant  
+**Lead Time**: 6 seconds  
+**Duration**: 4 seconds  
 **Timings**: Turn on 2-3s before player takes shot
 
 **Attribute Value Descriptions:**
@@ -211,6 +252,9 @@ Description of the Touches resource in the context of Soccer. This resource trac
 | Athlete | rosterAthletes | | The player making the touch |
 | Qualifier | enum | "In the Box", "TO", "" | Special characteristics of the touch |
 
+**Tag Creation**: Instant  
+**Lead Time**: 2 seconds  
+**Duration**: 5 seconds  
 **Timings**: Turn on 1-2s before player touches the ball in opponent 16m box and when a player from attacking team make TO during receiving a pass
 
 **Attribute Value Descriptions:**
@@ -227,4 +271,7 @@ Description of the Transition resource in the context of Soccer. This resource t
 |----------------|------|----------------|-------------|
 | Won_By | teamNames | | The team gaining possession in transition |
 
+**Tag Creation**: Instant  
+**Lead Time**: 0 seconds  
+**Duration**: 3 seconds  
 **Timings**: Automatically created by software when there is a change in possession of the teams
