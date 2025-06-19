@@ -6,6 +6,9 @@ Welcome to our comprehensive API documentation. This guide will help you underst
 
 Our documentation is organized into several key sections:
 
-- **Vidswap**: Vidswap
-- **DataApi**: Data APi
+- **Vidswap**: Entity relationship models and documentation
+- **Data API**: 
+  - **Specifications**: Technical specifications and schema documentation
+  - **Guides**: Integration guides and process flows
+  - **Glossaries**: Sport-specific terminology and definitions
 

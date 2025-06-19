@@ -29,6 +29,7 @@ Partners looking to integrate their game videos into our system begin the proces
 
 ### 2. Event Creation
 The Partner creates an External VOD Event by sending a POST request to the PAPI endpoint:
+This endpoint can also be used to add credit types and priorities at the event level. 
 
 **API Endpoint:**
 ```
@@ -51,6 +52,11 @@ Content-Type: application/json
   "venue": {
     "_id": "{venueId}"
   },
+  "eventBreakdown": 
+   {     
+      "priority": 2,
+      "creditType": "standard"   
+   }
   "streamType": "vod",
   "productionType": "basketball",
   "scoreboardData": {
