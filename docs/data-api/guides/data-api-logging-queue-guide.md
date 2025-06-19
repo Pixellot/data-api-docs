@@ -1,8 +1,13 @@
-# Data API logging queue guide for partners
+# Data API logging queue guide for partners 🚧 [IN DEVELOPMENT]
+
+> **Status**: 🚧 In Development  
+> **Availability**: Not available for testing or production use
+
+⚠️ **This logging queue mechanism is currently in development and is NOT available for use. This documentation is provided for planning and preview purposes only.**
 
 ## Overview
 
-This guide explains how to create/update an event on the Partner API and define credit type and priority for logging.
+This guide explains how to create/update an event on the Partner API and define credit type and priority for logging **when this feature becomes available**.
 
 There are two ways to create an event and define the credit type and priority on the Partner API:
 
@@ -167,4 +172,12 @@ Updates to breakdownDetails will be blocked if the event has already been logged
 ## Key Notes
 
 - If breakdownDetails are not specified, the logging system will use the default logging settings.
-- If an invalid type or priority is provided, the logging system will also fall back to default logging. 
+- If an invalid type or priority is provided, the logging system will also fall back to default logging.
+
+---
+
+## 🚨 **FINAL WARNING** 🚨
+
+**This logging queue mechanism is currently in development and should NOT be used in production environments.**
+
+For questions about availability, please contact your Pixellot representative. 

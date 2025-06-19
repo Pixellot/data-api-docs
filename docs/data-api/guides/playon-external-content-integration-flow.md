@@ -31,6 +31,8 @@ Partners looking to integrate their game videos into our system begin the proces
 The Partner creates an External VOD Event by sending a POST request to the PAPI endpoint:
 This endpoint can also be used to add credit types and priorities at the event level. For detailed information about credit types and priorities, see the [Data API logging queue guide](data-api-logging-queue-guide.md).
 
+> **⚠️ Development Feature**: The logging queue mechanism (breakdownDetails) is currently in development and is NOT available for use. This feature is provided for planning purposes only.
+
 **API Endpoint:**
 ```
 POST https://api.pixellot.tv/v1/clubs/{clubId}/events
@@ -71,7 +73,7 @@ Content-Type: application/json
 - `start$date` and `end$date`: Must be in the past and in ISO 8601 format (UTC)
 - `status`: Must be "archived"
 - `streamType`: Must be "vod"
-- `breakdownDetails`: Optional object for defining credit type and priority for logging. If provided, both `type` and `priority` fields are required.
+- `breakdownDetails`: Optional object for defining credit type and priority for logging. If provided, both `type` and `priority` fields are required. **Note: This feature is currently in development and not yet available.**
 
 ### 3. Event Confirmation
 - PAPI processes the event creation request
