@@ -170,9 +170,9 @@ Replace {your_api_token} with your actual API token.
 Updates to breakdownDetails will be blocked if the event has already been logged or is currently in the process of logging
 
 ## Key Notes
-
-- If breakdownDetails are not specified, the logging system will use the default logging settings.
+- Skip logging if breakdownDetails are missing and neither a team nor a league rule is specified.
 - If an invalid type or priority is provided, the logging system will also fall back to default logging.
+- Default logging settings are:  type: “basic“, priority: 2.
 
 ---
 
