@@ -20,6 +20,10 @@ This document provides a technical overview of the sports event logging workflow
   - League association (if both teams are associated with the league for the event's season)
   - Existence of league logging rules
   - Existence of team logging rules
+- If breakdown details are **NOT specified** and league/team rules are **NOT applied**:
+  - The event will **NOT** be sent for breakdown
+- If breakdown details are **NOT specified** and league/team rules are **applied**:
+  - The event will be sent for breakdown according to league/team rules
 - If qualifying conditions are met, event is marked for logging
 - Break-down type is determined by the more extensive rule if both league and team rules exist
 
@@ -50,8 +54,9 @@ This document provides a technical overview of the sports event logging workflow
 - If quality is insufficient or large portions are missing, job may be failed
 - If quality is sufficient, logging proceeds
 - SLA timeframes:
-  - Basic breakdown: 4-8 hours from video availability
-  - Complex breakdown: Up to 12+ hours depending on complexity and queue load
+  - Priority 1: 12 hours for logging
+  - Priority 2: 24 hours for logging
+  - Priority 3: 48 hours for logging
 
 ### Job Completion
 - Logger marks job as complete
@@ -77,7 +82,7 @@ This document provides a technical overview of the sports event logging workflow
   - Event tagged data
   - Lineup information
   - Video sources ( Once a video reaches a logged/logging the video sources cannot be updated anymore. In the scenario that a video is marked as corrupt it will not 
-  go into the event queue and will still be elegabile for reupload)
+  go into the event queue and will still be elegibile for reupload)
 
 ### Update Processing
 - If changes detected after breakdown completion:
