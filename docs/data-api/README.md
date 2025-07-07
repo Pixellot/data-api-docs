@@ -4,6 +4,7 @@
 
 ### Specifications
 - [Schema](specifications/pixellot-dataapi-statstics-schema.md) - Technical schema documentation
+- [Widgets Support](specifications/widgets-support-specification.md) - Widget support specification across different sports
 
 ### Integration Guides
 - [Breakdown Data Update Integration Guide](guides/breakdown-data-update-integration-guide.md) - Guide for integrating breakdown data updates
