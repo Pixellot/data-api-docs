@@ -26,7 +26,7 @@ When we announce a major schema update, here's what you can expect:
 
 **Day 0**: Schema update announcement with draft schema, and release document available. Request for comments email sent to partners  
 **Day 7**: Partner consultation period ends  
-**Day 15**: Integration testing should be completed  
+**Day 20**: Integration testing should be completed  
 **Day 25**: Final rollout email sent to customers  
 **Day 30**: New schema goes live at predefined time
 
@@ -41,7 +41,7 @@ When we announce a major schema update, here's what you can expect:
 - Partner feedback collection period concludes
 - Review of partner comments and concerns
 
-#### Day 15: Testing Completion
+#### Day 20: Testing Completion
 - All integration testing should be completed
 
 #### Day 25: Final Rollout
@@ -144,31 +144,6 @@ No, schema updates are part of your existing Data API subscription. However, you
 
 ### Q: How often do major schema updates occur?
 We aim to minimize breaking changes and release major versions only when necessary. Advance planning and timing of major updates will be shared during our regular partner communications.
-
----
-
-## Minor Version Release Process
-
-### Timeline Overview
-For minor schema updates, we follow a streamlined process:
-
-**Day 0**: Schema update announcement with:
-- Draft schema
-- Release document
-- Notification email to partners
-
-**Day 14**: New schema goes live at predefined time
-
-### Key Milestones
-
-#### Day 0: Initial Release
-- Draft schema available
-- Release document published
-- Notification email sent to partners
-
-#### Day 14: Go-Live
-- New schema becomes active at predefined time
-- System switches to new schema version
 
 ---
 
