@@ -475,7 +475,8 @@
                         "description": "Name of the team",
                         "examples": ["Magdalena", "Creighton"]
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   },
                   {
                     "type": "object",
@@ -500,7 +501,8 @@
                         "description": "Jersey number of the athlete",
                         "examples": ["20", "35"]
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 ]
               }
