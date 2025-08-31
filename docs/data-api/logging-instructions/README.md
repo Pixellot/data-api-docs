@@ -56,6 +56,27 @@ Complete volleyball logging instructions, covering:
 - Referee signal interpretation
 - Point scoring and rotation
 
+### [Basketball](basketball.md)
+Comprehensive basketball logging guide, featuring:
+- Period and possession tracking
+- Jump ball situations
+- Shot logging and descriptions
+- Rebound and turnover tracking
+- Foul classification
+- Advanced and FIBA variations
+- Player lineup management
+- Total minutes tracking
+
+### [Baseball & Softball](baseball-softball.md)
+Detailed logging instructions for baseball and softball, including:
+- Inning and team at bat tracking
+- Pitcher and batter information
+- Count, outs, and base position logging
+- Result classification and hit types
+- RBI and stat tracking
+- Location mapping
+- Clipping procedures
+
 ## General Logging Principles
 
 All logging instructions follow these common principles:
