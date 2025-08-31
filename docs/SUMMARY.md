@@ -22,6 +22,8 @@
     * [Flag Football](data-api/logging-instructions/flag-football.md)
     * [Field Hockey](data-api/logging-instructions/field-hockey.md)
     * [Volleyball](data-api/logging-instructions/volleyball.md)
+    * [Basketball](data-api/logging-instructions/basketball.md)
+    * [Baseball/Softball](data-api/logging-instructions/baseball-softball.md)
   * [Glossaries](data-api/glossary/glossaries.md)
     * [American Football](data-api/glossary/american-football/american-football.md)
     * [Field Hockey](data-api/glossary/field-hockey/field-hockey.md)
