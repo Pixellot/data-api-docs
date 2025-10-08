@@ -638,7 +638,7 @@
             },
             "venue": {
               "type": "string",
-              "description": "ID of the venue used for the event. Can be missed for certain events",
+              "description": "ID of the venue used for the event. Optional field as it can be missed for non-external events",
               "examples": ["60b353ebb59e3af4c8cb2d45"]
             },
             "lineup": {
@@ -750,9 +750,10 @@
             "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]            
           },
           "startUtc": {
-            "type": "integer",
-            "description": "Start time of the angle in UTC format",
-            "examples": [1758751698]
+            "type": "string",
+            "format": "date-time",
+            "description": "Indicator of event start time in UTC format",
+            "examples": ["2025-05-01T12:00:00.000Z"]
           }
         }
       }
