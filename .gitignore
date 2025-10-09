@@ -2,3 +2,7 @@ node_modules/
 testing-data/
 db-config.json
 validations
+
+# Local reference files for PR reviews
+review_comments.json
+roman_review_requests.json
