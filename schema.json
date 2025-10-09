@@ -612,32 +612,33 @@
             "ids": {
               "type": "object",
               "description": "Various system IDs for the event",
+              "required": ["advantage"],
               "properties": {
                 "advantage": {
                   "type": "string",
-                  "description": "ID of the event in Advantage",
+                  "description": "ID of the event in Advantage. This field is always present",
                   "examples": ["68af417a5b1a116e63804719"]
                 },
                 "vidswap": {
                   "type": "string",
-                  "description": "ID of the event in VidSwap",
+                  "description": "ID of the event in VidSwap. Optional field - present in most cases but not guaranteed",
                   "examples": ["7627829"]
                 },
                 "mbe": {
                   "type": "string",
-                  "description": "MBE ID of event, also known as Pixellot ID. Can be missed for certain events",
+                  "description": "MBE ID of event, also known as Pixellot ID. Optional field - only present for external events (e.g., created by NFHS console)",
                   "examples": ["68af416b49ec903802b226a6"]
                 },
                 "nfhs": {
                   "type": "string",
-                  "description": "NFHS ID of event, also known as Unity Game ID (PlayOn ID). Can be missed for certain events",
+                  "description": "NFHS ID of event, also known as Unity Game ID (PlayOn ID). Optional field - only present for external events (e.g., created by NFHS console)",
                   "examples": ["gam75cf98788b"]
                 }
               }
             },
             "venue": {
               "type": "string",
-              "description": "ID of the venue used for the event. Can be missed for certain events",
+              "description": "ID of the venue used for the event. Optional field - only present when venue data is available from MBE (typically for external events)",
               "examples": ["60b353ebb59e3af4c8cb2d45"]
             },
             "lineup": {
@@ -704,20 +705,20 @@
         },
         "breakdownAttributes": {
           "type": "object",
-          "description": "Attributes describing the breakdown data",
+          "description": "Attributes describing the breakdown data. Optional object - can be omitted completely if breakdown data is not available. Each individual field (id, type, priority) can also be present or missing independently",
           "properties": {
             "id": {
               "type": "string",
-              "description": "Breakdown ID"
+              "description": "Breakdown ID. Optional field"
             },
             "type": {
               "type": "string",
-              "description": "Type of the breakdown",
+              "description": "Type of the breakdown. Optional field",
               "enum": ["basic", "advanced"]
             },
             "priority": {
               "type": "integer",
-              "description": "Priority of the breakdown (integer number)"
+              "description": "Priority of the breakdown (integer number). Optional field"
             }
           }
         },
@@ -749,9 +750,10 @@
             "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]            
           },
           "startUtc": {
-            "type": "integer",
-            "description": "Start time of the angle in UTC format",
-            "examples": [1758751698]
+            "type": "string",
+            "format": "date-time",
+            "description": "Indicator of event start time in UTC format",
+            "examples": ["2025-05-01T12:00:00.000Z"]
           }
         }
       }
