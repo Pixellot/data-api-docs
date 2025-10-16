@@ -168,7 +168,7 @@ Updates to breakdownDetails will be blocked if the event has already been logged
 - Skip logging if breakdownDetails are missing and neither a team nor a league rule is specified.
 - If an invalid type or priority is provided, the logging system will also fall back to default logging.
 - Default logging settings are:  type: “basic“, priority: 2.
-- For PlayOn, the way to cancel logging is to define an American Football game with logging type Advanced and priority 3. This action is only effective if the game has not started the logging process (Logging) and has not finished it (Finished or Failed).
+- For PlayOn, as a temporary solution, the way to cancel an API breakdown request for an American Football game is to update it with logging type Advanced and priority 3. This action is only effective if the game has not started the logging process (Logging) and has not finished it (Finished or Failed).
 
 ---
 
