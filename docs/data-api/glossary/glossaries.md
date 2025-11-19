@@ -5,7 +5,12 @@ This section contains sport-specific glossaries that define and explain key term
 ## Available Glossaries
 
 - [American Football Glossary](american-football/american-football.md)
+- [Baseball/Softball Glossary](baseball-softball/baseball-softball.md)
+- [Basketball Glossary](basketball/basketball.md)
 - [Field Hockey Glossary](field-hockey/field-hockey.md)
+- [Flag Football Glossary](flag-football/flag-football.md)
+- [Lacrosse Men Glossary](lacrosse-men/lacrosse-men.md)
+- [Lacrosse Women Glossary](lacrosse-women/lacrosse-women.md)
 - [Soccer Glossary](soccer/soccer.md)
 - [Volleyball Glossary](volleyball/volleyball.md)
 

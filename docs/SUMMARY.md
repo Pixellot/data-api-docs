@@ -26,7 +26,12 @@
     * [Baseball/Softball](data-api/logging-instructions/baseball-softball.md)
   * [Glossaries](data-api/glossary/glossaries.md)
     * [American Football](data-api/glossary/american-football/american-football.md)
+    * [Baseball/Softball](data-api/glossary/baseball-softball/baseball-softball.md)
+    * [Basketball](data-api/glossary/basketball/basketball.md)
     * [Field Hockey](data-api/glossary/field-hockey/field-hockey.md)
+    * [Flag Football](data-api/glossary/flag-football/flag-football.md)
+    * [Lacrosse Men](data-api/glossary/lacrosse-men/lacrosse-men.md)
+    * [Lacrosse Women](data-api/glossary/lacrosse-women/lacrosse-women.md)
     * [Soccer](data-api/glossary/soccer/soccer.md)
     * [Volleyball](data-api/glossary/volleyball/volleyball.md)
 
