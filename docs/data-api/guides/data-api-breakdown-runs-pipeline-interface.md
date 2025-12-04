@@ -50,7 +50,7 @@ Retrieves breakdown runs across all events in the system. Results are grouped by
 
 | Parameter | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `sort` | string | No | `-modified$date` | Sort field and direction **Prefix with** `-` **for descending**  Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
+| `sort` | string | No | `-modified$date` | Sort field and direction. **Prefix with** `-` **for descending**.  Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
 | `limit` | integer | No | 10 | Maximum number of records to return **Minimum:** 1 |
 | `skip` | integer | No | — | Number of records to skip **Minimum:** 0 |
 | `mode` | string | No | — | Filter by mode (e.g., `"ai"`, `"manual"`) |
