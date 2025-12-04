@@ -19,8 +19,8 @@ Available list of statuses:
 * processing - Event is logging
 * completed - Logging has been successfully completed 
 * failed - Logging has been failed 
-* file_ready - Json file successfully created
-* file_failed - Failed to generate json file
+* file_ready - JSON file successfully created
+* file_failed - Failed to generate JSON file
 
 ---
 
@@ -30,7 +30,6 @@ Available list of error codes:
 
 * internal_server_error
 * missing_videos
-* missing_tags 
 
 ---
 
@@ -50,7 +49,7 @@ Retrieves breakdown runs across all events in the system. Results are grouped by
 
 | Parameter | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `sort` | string | No | `-modified$date` | Sort field and direction **Prefix with** `-` **for descending**  Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
+| `sort` | string | No | `-modified$date` | Sort field and direction **Prefix with** `-` **for descending**.  Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
 | `limit` | integer | No | 10 | Maximum number of records to return **Minimum:** 1 |
 | `skip` | integer | No | — | Number of records to skip **Minimum:** 0 |
 | `mode` | string | No | — | Filter by mode (e.g., `"ai"`, `"manual"`) |
@@ -77,8 +76,6 @@ Returns an array of `BreakdownRunsAggregatedResponse` objects:
   }
 ]
 ```
-
-`Default` — Unexpected error
 
 #### Example Request
 
@@ -109,7 +106,7 @@ Retrieves all breakdown runs associated with a specific event. Use this endpoint
 
 | Parameter | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `sort` | string | No | `-modified$date` | Sort field and direction **Prefix with** `-` **for descending** Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
+| `sort` | string | No | `-modified$date` | Sort field and direction **Prefix with** `-` **for descending**. Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
 | `limit` | integer | No | 10 | Maximum number of records to return **Minimum:** 1 |
 | `skip` | integer | No | — | Number of records to skip **Minimum:** 0 |
 | `mode` | manual \| ai | No | — | Filter by mode (e.g., `"ai"`, `"manual"`) |
@@ -136,8 +133,6 @@ Returns an array of `BreakdownRunResponse` objects:
   }
 ]
 ```
-
-`Default` — Unexpected error
 
 #### Example Request
 
@@ -184,8 +179,6 @@ Returns a `BreakdownRunResponse` object:
   "errors": []
 }
 ```
-
-`Default` — Unexpected error
 
 #### Example Request
 
