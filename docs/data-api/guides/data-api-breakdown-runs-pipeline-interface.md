@@ -109,7 +109,7 @@ Retrieves all breakdown runs associated with a specific event. Use this endpoint
 
 | Parameter | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `sort` | string | No | `-modified$date` | Sort field and direction **Prefix with** `-` **for descending** Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
+| `sort` | string | No | `-modified$date` | Sort field and direction. **Prefix with** `-` **for descending**. Allowed: `modified$date`, `-modified$date`, `create$date`, `-create$date` |
 | `limit` | integer | No | 10 | Maximum number of records to return **Minimum:** 1 |
 | `skip` | integer | No | — | Number of records to skip **Minimum:** 0 |
 | `mode` | manual \| ai | No | — | Filter by mode (e.g., `"ai"`, `"manual"`) |
