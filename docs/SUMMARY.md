@@ -16,6 +16,7 @@
     * [Logging Process Flow](data-api/guides/logging-process-flow.md)
     * [Logging Queue Data API Guide](data-api/guides/data-api-logging-queue-guide.md)
     * [Schema Update Partner Guide](data-api/guides/schema-update-partner-guide.md)
+    * [Breakdown Runs API](data-api/guides/data-api-breakdown-runs-pipeline-interface.md)
   * [Logging Instructions](data-api/logging-instructions/)
     * [Soccer](data-api/logging-instructions/soccer.md)
     * [Outdoor Football](data-api/logging-instructions/outdoor-football.md)
