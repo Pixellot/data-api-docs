@@ -29,6 +29,13 @@ Available list of statuses:
 Available list of error codes:
 
 * internal_server_error
+* athlete_id_issue
+* technical_issues
+* not_synchronized_camera_angles
+* wrong_sport
+* wrong_video
+* not_a_game
+* incomplete_video
 * missing_videos
 
 ---
