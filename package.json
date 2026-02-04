@@ -1,0 +1,20 @@
+{
+  "name": "data-api-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pixellot/data-api-docs.git"
+  },
+  "homepage": "https://github.com/Pixellot/data-api-docs#readme",
+  "dependencies": {
+    "ajv": "^8.17.1"
+  }
+}
