@@ -16,7 +16,7 @@
       "description": "Version of the schema following semantic versioning (X.Y.Z)",
       "pattern": "^\\d+\\.\\d+\\.\\d+$",
       "examples": ["2.0.0"]
-    },     
+    },
     "matchTeamStats": {
       "type": "object",
       "description": "Stats for the teams that participated in the game",
@@ -318,9 +318,9 @@
                 "type": "object",
                 "description": "A point of interest in a game which was logged, plus enriched data about the tag resource and tag attributes",
                 "required": [
-                  "id", 
-                  "gameId", 
-                  "resource", 
+                  "id",
+                  "gameId",
+                  "resource",
                   "attrs",
                   "angles"
                 ],
@@ -406,7 +406,7 @@
                           "oneOf": [
                             { "type": "string" },
                             { "type": "number" },
-                            { 
+                            {
                               "type": "array",
                               "items": {
                                 "type": "string"
@@ -414,9 +414,9 @@
                             }
                           ],
                           "examples": [
-                            "offense", 
-                            "6579de1d7e14a67a0e1a91bf", 
-                            "67a38884b62bf88b1146a82a", 
+                            "offense",
+                            "6579de1d7e14a67a0e1a91bf",
+                            "67a38884b62bf88b1146a82a",
                             "50 John Cohen",
                             "{\"x\":517.2781982421875,\"y\":311.42251586914062,\"x2\":0,\"y2\":0,\"type\":\"point\",\"sector\":11,\"orientation\":\"left\"}"
                           ]
@@ -747,7 +747,7 @@
             "type": "string",
             "description": "URL to the recorded video stream",
             "format": "uri",
-            "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]            
+            "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]
           },
           "startUtc": {
             "type": "string",
