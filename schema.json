@@ -766,8 +766,11 @@
               "description": "Priority of the breakdown (integer number). Optional field"
             },
             "loggerNotes": {
-              "type": "string",
+              "type": "array",
               "description": "Notes from the logger",
+              "items": {
+                "type": "string"
+              },
               "examples": ["This game was logged on VidSwap"]
             }
           }
@@ -801,7 +804,7 @@
           },
           "startUTC": {
             "type": "integer",
-            "description": "Indicator of event start time in UTC format",
+            "description": "Indicator of event UTC start time in format in seconds",
             "examples": [1739552865]
           }
         }
