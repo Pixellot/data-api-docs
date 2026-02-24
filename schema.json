@@ -766,12 +766,19 @@
               "description": "Priority of the breakdown (integer number). Optional field"
             },
             "loggerNotes": {
-              "type": "array",
-              "description": "Notes from the logger",
-              "items": {
-                "type": "string"
-              },
-              "examples": ["This game was logged on VidSwap"]
+              "oneOf": [
+                {
+                  "type": "array",
+                  "description": "Notes from the logger",
+                  "items": {
+                    "type": "string"
+                  },
+                  "examples": ["This game was logged on VidSwap"]
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
