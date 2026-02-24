@@ -16,7 +16,7 @@
       "description": "Version of the schema following semantic versioning (X.Y.Z)",
       "pattern": "^\\d+\\.\\d+\\.\\d+$",
       "examples": ["2.0.0"]
-    },     
+    },
     "matchTeamStats": {
       "type": "object",
       "description": "Stats for the teams that participated in the game",
@@ -318,9 +318,9 @@
                 "type": "object",
                 "description": "A point of interest in a game which was logged, plus enriched data about the tag resource and tag attributes",
                 "required": [
-                  "id", 
-                  "gameId", 
-                  "resource", 
+                  "id",
+                  "gameId",
+                  "resource",
                   "attrs",
                   "angles"
                 ],
@@ -406,7 +406,7 @@
                           "oneOf": [
                             { "type": "string" },
                             { "type": "number" },
-                            { 
+                            {
                               "type": "array",
                               "items": {
                                 "type": "string"
@@ -414,9 +414,9 @@
                             }
                           ],
                           "examples": [
-                            "offense", 
-                            "6579de1d7e14a67a0e1a91bf", 
-                            "67a38884b62bf88b1146a82a", 
+                            "offense",
+                            "6579de1d7e14a67a0e1a91bf",
+                            "67a38884b62bf88b1146a82a",
                             "50 John Cohen",
                             "{\"x\":517.2781982421875,\"y\":311.42251586914062,\"x2\":0,\"y2\":0,\"type\":\"point\",\"sector\":11,\"orientation\":\"left\"}"
                           ]
@@ -534,6 +534,23 @@
             }
           }
         },
+        "fileAttributes": {
+          "type": "object",
+          "description": "Attributes describing the file",
+          "properties": {
+            "lastUpdatedAt": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Last updated at date and time of the file in ISO 8601 format",
+              "examples": ["2025-09-25T02:00:00.000Z"]
+            },
+            "lastUpdateReason": {
+              "type": "string",
+              "description": "Reason for the last update",
+              "examples": ["breakdown_completed"]
+            }
+          }
+        },
         "eventAttributes": {
           "type": "object",
           "description": "Attributes describing the event/game",
@@ -608,6 +625,34 @@
                 }
               },
               "required": ["id", "name"]
+            },
+            "league": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "description": "League information",
+                  "properties": {
+                    "advantageId": {
+                      "type": "string",
+                      "description": "ID of the league in Advantage",
+                      "examples": ["68af417a5b1a116e63804719"]
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Title of the league"
+                    },
+                    "vidswapId": {
+                      "type": "integer",
+                      "description": "ID of the league in VidSwap",
+                      "examples": [7627829]
+                    }
+                  },
+                  "required": ["advantageId", "title", "vidswapId"]
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "ids": {
               "type": "object",
@@ -719,6 +764,21 @@
             "priority": {
               "type": "integer",
               "description": "Priority of the breakdown (integer number). Optional field"
+            },
+            "loggerNotes": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "description": "Notes from the logger",
+                  "items": {
+                    "type": "string"
+                  },
+                  "examples": ["This game was logged on VidSwap"]
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
@@ -747,13 +807,12 @@
             "type": "string",
             "description": "URL to the recorded video stream",
             "format": "uri",
-            "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]            
+            "examples": ["https://d2s0txx1aqnj4f.cloudfront.net/someTenantName/6736d0dc4c7136f9b31f0269/cloud_hls/0_hd_hls.m3u8"]
           },
-          "startUtc": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Indicator of event start time in UTC format",
-            "examples": ["2025-05-01T12:00:00.000Z"]
+          "startUTC": {
+            "type": "integer",
+            "description": "Indicator of event UTC start time in format in seconds",
+            "examples": [1739552865]
           }
         }
       }
